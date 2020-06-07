@@ -1,0 +1,13 @@
+A=imread('v1.jpg');
+A=rgb2gray(A);
+A=mat2gray(A);
+%A=double(A);
+B=imread('i1.jpg');
+B=rgb2gray(B);
+B=mat2gray(B);
+%B=double(B);
+lpfilt='maxflat';
+shear_parameters.dcomp=[2 3 3 4 5];
+shear_parameters.dsize=[16 16 16 16 16];
+[dst1,shear_f1]=nsst_dec1(A,shear_parameters,lpfilt);
+%[dst2,shear_f2]=nsst_dec1(B,shear_parameters,lpfilt);
